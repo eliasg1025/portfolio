@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+    db:
+        image: postgres
+        environment:
+            PGPASSWORD: '${DB_PASSWORD}'
+            POSTGRES_DB: '${DB_DATABASE}'
+            POSTGRES_USER: '${DB_USERNAME}'
+            POSTGRES_PASSWORD: '${DB_PASSWORD}'
+        ports:
+            - '5432:5432'
+        volumes:
+            - db_data:/var/lib/postgresql/data
+        networks:
+            - portfolio_network
+    web:
+        build: .
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - '8000:8000'
+        environment:
+            PGPASSWORD: '${DB_PASSWORD}'
+            POSTGRES_DB: '${DB_DATABASE}'
+            POSTGRES_USER: '${DB_USERNAME}'
+            POSTGRES_PASSWORD: '${DB_PASSWORD}'
+        networks:
+            - portfolio_network
+        depends_on:
+            - db
+volumes:
+    db_data:
+        driver: local
+networks:
+    portfolio_network:
+        driver: bridge
