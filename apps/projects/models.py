@@ -17,8 +17,11 @@ class Experience(models.Model):
     init_date = models.DateField()
     finish_date = models.DateField(null=True)
 
-    def __str__(self):
-        return "{} at {}".f(self.job, self.company)
+    def get_title(self):
+        return "{} at {}".format(self.job, self.company)
+
+    def get_period(self):
+        return "{} - {}".format(self.init_date.strftime("%b %Y"), self.finish_date.strftime("%b %Y") if self.finish_date else 'Current')
 
 
 class Project(models.Model):

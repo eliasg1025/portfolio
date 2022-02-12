@@ -1,0 +1,32 @@
+[
+    {
+        "model": "projects.experience",
+        "pk": 1,
+        "fields": {
+            "job": "Web Developer",
+            "company": "Roundtable",
+            "init_date": "2019-08-01",
+            "finish_date": "2020-01-01"
+        }
+    },
+    {
+        "model": "projects.experience",
+        "pk": 2,
+        "fields": {
+            "job": "IT assistant",
+            "company": "Nortfarma",
+            "init_date": "2020-02-01",
+            "finish_date": "2020-04-01"
+        }
+    },
+    {
+        "model": "projects.experience",
+        "pk": 3,
+        "fields": {
+            "job": "Process Analyst",
+            "company": "Rapel",
+            "init_date": "2020-05-01",
+            "finish_date": null
+        }
+    }
+]

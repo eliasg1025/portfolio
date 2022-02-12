@@ -1,24 +1,25 @@
 {% extends 'index.html' %}
+{% load static %}
 {% block page_content %}
     {# Header card #}
-    <header className="row">
-        <div className="col-md-12">
-            <div className="card card-body bg-secondary text-light animate__animated animate__fadeIn">
-                <div className="row">
-                    <div className="col-md-4">
-                        <img src="/ryan-ray-profile2.jpeg" alt="" className="img-fluid"/>
+    <header class="row">
+        <div class="col-md-12">
+            <div class="card card-body bg-dark text-light animate__animated animate__fadeIn">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://avatars.githubusercontent.com/u/46615624?v=4" alt="Profile Image" class="img-fluid" />
                     </div>
-                    <div className="col-md-8">
-                        <h1>Elias Guere</h1>
-                        <h3>Software Developer</h3>
+                    <div class="col-md-8">
+                        <h1 class="text-light">Elias Guere</h1>
+                        <h3 class="text-light">Software Developer</h3>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                             Molestiae atque ullam perferendis harum, nisi porro voluptate,
                             iste consequuntur enim reprehenderit architecto consectetur cum?
                             Totam ad molestias natus illum illo officia.
                         </p>
-                        <a href="/contact" className="btn btn-outline-light">
-                            Hire Me
+                        <a href="/contact" class="btn btn-outline-light text-light">
+                            Download Resume
                         </a>
                     </div>
                 </div>
@@ -27,14 +28,25 @@
     </header>
 
     {# Second section #}
-    <section class="row">
+    <section class="row pt-2">
         <div class="col-md-4 py-2">
-            <div class="card bg-light animate__animated animate__fadeInLeft">
+            <div class="card animate__animated animate__fadeInLeft">
                 <div class="card-body">
-                    <h1>Skills</h1>
+                    <h2>Skills and Tools</h2>
 
-                    {# Skill Progress  #}
-
+                    {# Skill Progress #}
+                    {% for technology in technologies %}
+                        <div class="d-flex py-3">
+                            <img src="{{ technology.logo }}" alt="{{ technology.description }} Logo" width="40" height="40" style="margin: auto;">
+                            <div class="w-100 ps-2">
+                                <h5>{{ technology.description }}</h5>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ technology.percentage }}%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -43,13 +55,24 @@
             {# Experience #}
             <div class="card bg-light animate__animated animate__fadeInRight">
                 <div class="card-body">
-                    <h1>Experience</h1>
+                    <h2>Experience</h2>
 
-                    <ul>
-                        {# List Item Experience #}
-
+                    <ul class="timeline">
+                        {% for experience in experiences %}
+                            <li>
+                                <h4>{{ experience.get_title }}</h4>
+                                <h5>
+                                    {{ experience.get_period }}
+                                </h5>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Sint excepturi ea explicabo. Illum suscipit illo, porro
+                                    quisquam voluptatem officiis fugiat vel animi aliquam
+                                    inventore rem. Quo laudantium temporibus cupiditate. Aut?
+                                </p>
+                            </li>
+                        {% endfor %}
                     </ul>
-                    <a className="btn btn-light">Know More</a>
                 </div>
             </div>
         </div>

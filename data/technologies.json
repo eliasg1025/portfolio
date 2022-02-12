@@ -1,0 +1,200 @@
+[
+    {
+        "model": "projects.technology",
+        "pk": 1,
+        "fields": {
+            "description": "PHP",
+            "percentage": 100,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 2,
+        "fields": {
+            "description": "Javascript",
+            "percentage": 90,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 3,
+        "fields": {
+            "description": "Python",
+            "percentage": 70,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 4,
+        "fields": {
+            "description": "Dart",
+            "percentage": 60,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 5,
+        "fields": {
+            "description": "Node.js",
+            "percentage": 80,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 6,
+        "fields": {
+            "description": "Laravel",
+            "percentage": 100,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 7,
+        "fields": {
+            "description": "Vue.js",
+            "percentage": 90,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 8,
+        "fields": {
+            "description": "React.js",
+            "percentage": 70,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 9,
+        "fields": {
+            "description": "Express.js",
+            "percentage": 50,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 10,
+        "fields": {
+            "description": "Flutter",
+            "percentage": 50,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 11,
+        "fields": {
+            "description": "Django",
+            "percentage": 50,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 12,
+        "fields": {
+            "description": "MySQL",
+            "percentage": 90,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 13,
+        "fields": {
+            "description": "PostgreSQL",
+            "percentage": 80,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 14,
+        "fields": {
+            "description": "Redis",
+            "percentage": 70,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 15,
+        "fields": {
+            "description": "MongoDB",
+            "percentage": 60,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 16,
+        "fields": {
+            "description": "Git",
+            "percentage": 80,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 17,
+        "fields": {
+            "description": "Docker",
+            "percentage": 70,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 18,
+        "fields": {
+            "description": "Apache",
+            "percentage": 80,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 19,
+        "fields": {
+            "description": "Nginx",
+            "percentage": 80,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 20,
+        "fields": {
+            "description": "Heroku",
+            "percentage": 60,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 21,
+        "fields": {
+            "description": "Digital Ocean",
+            "percentage": 70,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 22,
+        "fields": {
+            "description": "Ubuntu",
+            "percentage": 90,
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+        }
+    }
+]

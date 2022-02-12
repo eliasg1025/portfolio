@@ -15,17 +15,14 @@ services:
         networks:
             - portfolio_network
     web:
-        build: .
+        build:
+            context: .
+            dockerfile: ./docker/python/Dockerfile
         command: python manage.py runserver 0.0.0.0:8000
         volumes:
             - .:/code
         ports:
             - '8000:8000'
-        environment:
-            PGPASSWORD: '${DB_PASSWORD}'
-            POSTGRES_DB: '${DB_DATABASE}'
-            POSTGRES_USER: '${DB_USERNAME}'
-            POSTGRES_PASSWORD: '${DB_PASSWORD}'
         networks:
             - portfolio_network
         depends_on:
