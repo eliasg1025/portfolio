@@ -1,0 +1,24 @@
+[
+    {
+        "model": "projects.project",
+        "pk": 1,
+        "fields": {
+            "title": "Roundtable",
+            "description": "Roundtable is a communication plaform between agro producers and buyers.",
+            "url": "https://roundtable-peru.herokuapp.com/",
+            "image": "/img/projects/roundtable.png",
+            "technologies": [6, 7, 1, 2, 12, 18, 20]
+        }
+    },
+    {
+        "model": "projects.project",
+        "pk": 2,
+        "fields": {
+            "title": "TuBoleta",
+            "description": "HR platform to close connection between employers and employees throught its documents",
+            "url": "https://www.tuboleta.app",
+            "image": "/img/projects/tuboleta.png",
+            "technologies": [6, 7, 1, 2, 13, 14, 17, 19, 22]
+        }
+    }
+]

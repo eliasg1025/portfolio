@@ -22,7 +22,7 @@ body {
 }
 
 .overflow .card-img-top:hover {
-    transform: scale(1.8);
+    transform: scale(1.2);
 }
 
 ul.timeline {

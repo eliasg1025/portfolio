@@ -1,80 +1,123 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block page_content %}
-    {# Header card #}
-    <header class="row">
-        <div class="col-md-12">
-            <div class="card card-body bg-dark text-light animate__animated animate__fadeIn">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://avatars.githubusercontent.com/u/46615624?v=4" alt="Profile Image" class="img-fluid" />
-                    </div>
-                    <div class="col-md-8">
-                        <h1 class="text-light">Elias Guere</h1>
-                        <h3 class="text-light">Software Developer</h3>
+{# Header card #}
+<header class="row">
+    <div class="col-md-12">
+        <div class="card card-body bg-dark text-light animate__animated animate__fadeIn">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://avatars.githubusercontent.com/u/46615624?v=4" alt="Profile Image"
+                        class="img-fluid rounded-circle mx-auto d-block" style="" height="300" width="300"/>
+                </div>
+                <div class="col-md-8">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+                        <h1 class="text-light pt-2">Elias Guere</h1>
+                        <h3 class="text-light text-muted">Software Developer</h3>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                             Molestiae atque ullam perferendis harum, nisi porro voluptate,
                             iste consequuntur enim reprehenderit architecto consectetur cum?
                             Totam ad molestias natus illum illo officia.
                         </p>
-                        <a href="/contact" class="btn btn-outline-light text-light">
-                            Download Resume
-                        </a>
+                        <div>
+                            <a title="Download Resume" href="{% static '/documents/EliasGuereCV.pdf' %}" target="_blank" class="btn btn-outline-light text-light">
+                                <i class="fa fa-file" aria-hidden="true"></i> Download Resume
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    {# Second section #}
-    <section class="row pt-2">
-        <div class="col-md-4 py-2">
-            <div class="card animate__animated animate__fadeInLeft">
-                <div class="card-body">
-                    <h2>Skills and Tools</h2>
+{# Second section #}
+<section class="row pt-2">
+    <div class="col-md-4 py-2">
+        <div class="card animate__animated animate__fadeInLeft">
+            <div class="card-body">
+                <h2 id="skills-and-tools">Skills and Tools</h2>
 
-                    {# Skill Progress #}
-                    {% for technology in technologies %}
-                        <div class="d-flex py-3">
-                            <img src="{{ technology.logo }}" alt="{{ technology.description }} Logo" width="40" height="40" style="margin: auto;">
-                            <div class="w-100 ps-2">
-                                <h5>{{ technology.description }}</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: {{ technology.percentage }}%"
-                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                {# Skill Progress #}
+                {% for technology in technologies %}
+                <div class="d-flex py-3">
+                    <img src="{{ technology.logo }}" alt="{{ technology.description }} Logo"
+                        title="{{ technology.description }}" width="40" height="40" style="margin: auto;">
+                    <div class="w-100 ps-2">
+                        <h5>{{ technology.description }}</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: {{ technology.percentage }}%"
+                                title="{{ technology.description }} {{ technology.percentage }}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 py-2">
+        {# Experience #}
+        <div class="card bg-light animate__animated animate__fadeInRight">
+            <div class="card-body">
+                <h2 id="experience">Experience</h2>
+
+                <ul class="timeline">
+                    {% for experience in experiences %}
+                    <li>
+                        <h4>{{ experience.get_title }}</h4>
+                        <h5>
+                            {{ experience.get_period }}
+                        </h5>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Sint excepturi ea explicabo. Illum suscipit illo, porro
+                            quisquam voluptatem officiis fugiat vel animi aliquam
+                            inventore rem. Quo laudantium temporibus cupiditate. Aut?
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# Portfolio Section #}
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-body bg-dark">
+                <div class="row">
+                    <div class="col-md-12 my-2">
+                        <h2 id="projects" class="text-center text-light">Projects</h2>
+                    </div>
+                    {% for project in projects %}
+                        <div class="col-md-4 p-2">
+                            <div class="card h-100">
+                                <div class="overflow">
+                                    <img class="card-img-top" src="{% static project.image %}" alt="{{ project.title }} image" title="{{ project.title }}" />
+                                </div>
+                                <div class="card-body">
+                                    <h4>{{ project.title }}</h4>
+                                    <p>{{ project.description }}</p>
+                                    <a href="#!">Know more</a>
                                 </div>
                             </div>
                         </div>
                     {% endfor %}
+
+                    <div class="col-md-12 mt-4">
+                        <div class="text-center">
+                            <a href="https://github.com/eliasg1025" target="_blank" class="btn text-light btn-outline-light">
+                                View more projects on <i class="fa fa-github" aria-hidden="true"></i> Github
+                            </a>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-8 py-2">
-            {# Experience #}
-            <div class="card bg-light animate__animated animate__fadeInRight">
-                <div class="card-body">
-                    <h2>Experience</h2>
-
-                    <ul class="timeline">
-                        {% for experience in experiences %}
-                            <li>
-                                <h4>{{ experience.get_title }}</h4>
-                                <h5>
-                                    {{ experience.get_period }}
-                                </h5>
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                    Sint excepturi ea explicabo. Illum suscipit illo, porro
-                                    quisquam voluptatem officiis fugiat vel animi aliquam
-                                    inventore rem. Quo laudantium temporibus cupiditate. Aut?
-                                </p>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 {% endblock %}

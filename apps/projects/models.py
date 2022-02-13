@@ -27,8 +27,9 @@ class Experience(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    technologies = models.ManyToManyField(Technology)
+    url = models.URLField(null=True)
     image = models.FilePathField(null=True)
+    technologies = models.ManyToManyField(Technology)
 
     def __str__(self):
         return self.title
