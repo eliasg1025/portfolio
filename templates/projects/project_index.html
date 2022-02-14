@@ -15,10 +15,7 @@
                         <h1 class="text-light pt-2">Elias Guere</h1>
                         <h3 class="text-light text-muted">Software Developer</h3>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestiae atque ullam perferendis harum, nisi porro voluptate,
-                            iste consequuntur enim reprehenderit architecto consectetur cum?
-                            Totam ad molestias natus illum illo officia.
+                            Hola soy Elias, soy de Perú 🇵🇪. Tengo experiencia desarrollando de aplicaciónes web y móviles para mis proyectos y para empresas. Me dedico a solucionar los problemas con ayuda del código, asi que se podría decir que programar es tanto mi hobbie como mi trabajo.
                         </p>
                         <div>
                             <a title="Download Resume" href="{% static '/documents/EliasGuereCV.pdf' %}" target="_blank" class="btn btn-outline-light text-light">
@@ -71,10 +68,7 @@
                             {{ experience.get_period }}
                         </h5>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Sint excepturi ea explicabo. Illum suscipit illo, porro
-                            quisquam voluptatem officiis fugiat vel animi aliquam
-                            inventore rem. Quo laudantium temporibus cupiditate. Aut?
+                            {{ experience.description|linebreaks }}
                         </p>
                     </li>
                     {% endfor %}
@@ -88,7 +82,7 @@
 <section>
     <div class="row">
         <div class="col-md-12">
-            <div class="card card-body bg-dark">
+            <div class="card card-body bg-dark animate__animated animate__fadeIn">
                 <div class="row">
                     <div class="col-md-12 my-2">
                         <h2 id="projects" class="text-center text-light">Projects</h2>

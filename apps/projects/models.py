@@ -14,6 +14,7 @@ class Technology(models.Model):
 class Experience(models.Model):
     job = models.CharField(max_length=200)
     company = models.CharField(max_length=200)
+    description = models.TextField(null=True)
     init_date = models.DateField()
     finish_date = models.DateField(null=True)
 
