@@ -14,6 +14,9 @@ Si tienes docker y docker-compose:
     # Construir y desplegar el proyecto
     docker-compose up -d --build
 
+    # Para crear la base de datos
+    docker-compose exec web python manage.py migrate
+
     # Para cargar los datos por defecto
     docker-compose exec web python manage.py loaddata ./data/data.json
 ```
