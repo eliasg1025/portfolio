@@ -20,3 +20,9 @@ Si tienes docker y docker-compose:
     # Para cargar los datos por defecto
     docker-compose exec web python manage.py loaddata ./data/data.json
 ```
+
+Para correr con gunicorn:
+
+```
+    gunicorn portfolio.wsgi 
+```
